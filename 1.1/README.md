@@ -15,7 +15,8 @@
 
 ### Задание 2. Установка и настройка локального kubectl
 1. Установить на локальную машину kubectl.  
-![dash](https://github.com/SashkaSer/kuber/blob/main/1.1/images/kubctl_win.png)`
+![kubectl](https://github.com/SashkaSer/kuber/blob/main/1.1/images/kubctl_win.png)`
 3. Настроить локально подключение к кластеру.
-
+Удаленное подключение к кластеру  
+![getnodes](https://github.com/SashkaSer/kuber/blob/main/1.1/images/getnodes.png)`
 3. Подключиться к дашборду с помощью port-forward.
