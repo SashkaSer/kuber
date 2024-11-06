@@ -8,4 +8,15 @@
 2. Установить dashboard.
 Установленный дашборд  
 ![dash](https://github.com/SashkaSer/kuber/blob/main/1.1/images/dash.png)`
+
+3. Сгенерировать сертификат для подключения к внешнему ip-адресу.
+Машина установлена на домашнем ПК, внешнего IP нет
 ---
+
+### Задание 2. Установка и настройка локального kubectl
+1. Установить на локальную машину kubectl.  
+![dash](https://github.com/SashkaSer/kuber/blob/main/1.1/images/kubctl_win.png)`
+
+2. Настроить локально подключение к кластеру.
+
+3. Подключиться к дашборду с помощью port-forward.
