@@ -5,4 +5,7 @@
 Установленный MicroK8S  
 ![MicroK8S](https://github.com/SashkaSer/kuber/blob/main/1.1/images/installed_microk8s.png)`
 
+2. Установить dashboard.
+Установленный дашборд  
+![dash](https://github.com/SashkaSer/kuber/blob/main/1.1/images/dash.png)`
 ---
