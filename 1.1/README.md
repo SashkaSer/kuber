@@ -20,3 +20,5 @@
 Удаленное подключение к кластеру  
 ![getnodes](https://github.com/SashkaSer/kuber/blob/main/1.1/images/getnodes.png)`
 3. Подключиться к дашборду с помощью port-forward.
+Подключение к дашборду  
+![dashboard](https://github.com/SashkaSer/kuber/blob/main/1.1/images/dashboard.png)`
