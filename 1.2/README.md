@@ -60,6 +60,5 @@ spec:
 ```
 4. Подключиться локально к Service с помощью kubectl port-forward и вывести значение (curl или в браузере).  
 ![forward](https://github.com/SashkaSer/kuber/blob/main/1.2/images/forward.png)`  
-
-Подключение с удаленной машины 
+Подключение с удаленной машины   
 ![connect](https://github.com/SashkaSer/kuber/blob/main/1.2/images/curl2.png)`
