@@ -63,3 +63,5 @@ spec:
 
 Подключение с удаленной машины  
 ![connect](https://github.com/SashkaSer/kuber/blob/main/1.2/images/curl2.png)`
+
+Манифесты лежат в Git рядом с ридми
