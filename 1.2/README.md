@@ -3,7 +3,8 @@
 ### Задание 1
 1. Создать манифест (yaml-конфигурацию) Pod.
 2. Использовать image - gcr.io/kubernetes-e2e-test-images/echoserver:2.2.
-3. Подключиться локально к Pod с помощью kubectl port-forward и вывести значение (curl или в браузере).
+3. Подключиться локально к Pod с помощью kubectl port-forward и вывести значение (curl или в браузере).  
+
 Манифест
 ```
 apiVersion: v1
@@ -17,7 +18,7 @@ spec:
     ports:
     - containerPort: 8080
 ```
-
+![port](https://github.com/SashkaSer/kuber/blob/main/1.2/images/portforward.png)`
 ---
 
 ### Задание 2. Установка и настройка локального kubectl
