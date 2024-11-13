@@ -18,7 +18,11 @@ spec:
     ports:
     - containerPort: 8080
 ```
-![port](https://github.com/SashkaSer/kuber/blob/main/1.2/images/portforward.png)`
+![port](https://github.com/SashkaSer/kuber/blob/main/1.2/images/portforward.png)`  
+
+Curl на удаленном хосте  
+![curl](https://github.com/SashkaSer/kuber/blob/main/1.2/images/curl.png)` 
+
 ---
 
 ### Задание 2. Установка и настройка локального kubectl
