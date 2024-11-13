@@ -26,11 +26,40 @@ Curl на удаленном хосте
 ---
 
 ### Задание 2. Установка и настройка локального kubectl
-1. Установить на локальную машину kubectl.  
-![kubectl](https://github.com/SashkaSer/kuber/blob/main/1.1/images/kubctl_win.png)`
-3. Настроить локально подключение к кластеру.
-Удаленное подключение к кластеру  
-![getnodes](https://github.com/SashkaSer/kuber/blob/main/1.1/images/getnodes.png)`
-3. Подключиться к дашборду с помощью port-forward.
-Подключение к дашборду  
-![dashboard](https://github.com/SashkaSer/kuber/blob/main/1.1/images/dashboard.png)`  
+1. Создать Pod с именем netology-web.  
+2. Использовать image — gcr.io/kubernetes-e2e-test-images/echoserver:2.2.  
+Манифест пода
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: netology-web
+  labels:
+    app: myapp
+spec:
+  containers:
+  - name: echoserver
+    image: gcr.io/kubernetes-e2e-test-images/echoserver:2.2
+    ports:
+    - containerPort: 8080
+```
+3. Создать Service с именем netology-svc и подключить к netology-web.  
+Манифест сервиса  
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: netology-service
+spec:
+  selector:
+    app: myapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+```
+4. Подключиться локально к Service с помощью kubectl port-forward и вывести значение (curl или в браузере).  
+![forward](https://github.com/SashkaSer/kuber/blob/main/1.2/images/forward.png)`  
+
+Подключение с удаленной машины 
+![connect](https://github.com/SashkaSer/kuber/blob/main/1.2/images/curl2.png)`
