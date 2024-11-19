@@ -11,12 +11,30 @@
 ![after](https://github.com/SashkaSer/kuber/blob/main/1.3/img/after.png)`  
 
 4. Создать Service, который обеспечит доступ до реплик приложений из п.1.
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: pod-service
+spec:
+  selector:
+    app: myapp
+  ports:
+    - protocol: TCP
+      name: nginx
+      port: 80
+      targetPort: 80
+    - protocol: TCP
+      name: multitool
+      port: 8080
+      targetPort: 8080
+```  
+![service](https://github.com/SashkaSer/kuber/blob/main/1.3/img/service.png)`
+
 5. Создать отдельный Pod с приложением multitool и убедиться с помощью curl, что из пода есть доступ до приложений из п.1.
-![port](https://github.com/SashkaSer/kuber/blob/main/1.2/images/portforward.png)`  
+```
 
-Curl на удаленном хосте  
-![curl](https://github.com/SashkaSer/kuber/blob/main/1.2/images/curl.png)` 
-
+```
 ---
 ### Задание 2. Установка и настройка локального kubectl
 
