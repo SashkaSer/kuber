@@ -49,7 +49,10 @@ spec:
 Как видим под не запущен и находится в статусе init, хотя проверка проходит каждые 2 секунды в busybox
 ![init](https://github.com/SashkaSer/kuber/blob/main/1.3/img/init.png)`
 3. Создать и запустить Service. Убедиться, что Init запустился.  
-Создаю и запускаю service  
+Создаю и запускаю service.
 ![nslookup](https://github.com/SashkaSer/kuber/blob/main/1.3/img/nslookup.png)
 
+Не с первого раза получилось добиться ответа от DNS, методом эксперимента понял, что нужно добавлять доменное имя default.svc.cluster.local
 3. Продемонстрировать состояние пода до и после запуска сервиса.
+Сделал тоже самое но после отладки, видно что практически сразу же после поднятия сервиса init контейнер смог зарезолвить имя и запустился уже nginx  
+![nslookup2](https://github.com/SashkaSer/kuber/blob/main/1.3/img/nslookup2.png)
