@@ -48,5 +48,8 @@ spec:
 2. Убедиться, что nginx не стартует. В качестве Init-контейнера взять busybox.  
 Как видим под не запущен и находится в статусе init, хотя проверка проходит каждые 2 секунды в busybox
 ![init](https://github.com/SashkaSer/kuber/blob/main/1.3/img/init.png)`
-3. Создать и запустить Service. Убедиться, что Init запустился.
+3. Создать и запустить Service. Убедиться, что Init запустился.  
+Создаю и запускаю service  
+![nslookup](https://github.com/SashkaSer/kuber/blob/main/1.3/img/nslookup.png)
+
 3. Продемонстрировать состояние пода до и после запуска сервиса.
