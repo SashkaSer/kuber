@@ -56,4 +56,6 @@ spec:
 
 3. Продемонстрировать состояние пода до и после запуска сервиса.
 Сделал тоже самое но после отладки, видно что практически сразу же после поднятия сервиса init контейнер смог зарезолвить имя и запустился уже nginx  
-![nslookup2](https://github.com/SashkaSer/kuber/blob/main/1.3/img/nslookup2.png)
+![nslookup2](https://github.com/SashkaSer/kuber/blob/main/1.3/img/nslookup2.png)  
+
+Манифесты к заданию 1 лежат в manifests/task2
