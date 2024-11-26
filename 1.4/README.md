@@ -27,3 +27,4 @@
 ![nginx](https://github.com/SashkaSer/kuber/blob/main/1.4/img/nginxnp.png)  
 ![multitool](https://github.com/SashkaSer/kuber/blob/main/1.4/img/multitoolnp.png)
 
+Манифест деплоймента такой же как и в задании 1. Манифест сервиса в manifests/task2
