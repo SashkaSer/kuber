@@ -15,14 +15,6 @@
 
 ![multitool](https://github.com/SashkaSer/kuber/blob/main/1.3/img/multitool.png)`
 
-5. Создать отдельный Pod с приложением multitool и убедиться с помощью curl, что из пода есть доступ до приложений из п.1.
-
-При запросе 80 порта отвечает Nginx
-![nginx](https://github.com/SashkaSer/kuber/blob/main/1.3/img/nginx.png)`  
-
-При запросе 8080 порта отвечает multitool
-![nginx](https://github.com/SashkaSer/kuber/blob/main/1.3/img/multitool.png)`  
-
 Манифесты к заданию 1 лежат в manifests/task1
 
 ---
