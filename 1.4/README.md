@@ -24,6 +24,6 @@
 2. Продемонстрировать доступ с помощью браузера или curl с локального компьютера.
 3. Предоставить манифест и Service в решении, а также скриншоты или вывод команды п.2.
   
-![nginx](https://github.com/SashkaSer/kuber/blob/main/1.3/img/nginxnp.png)  
-![multitool](https://github.com/SashkaSer/kuber/blob/main/1.3/img/multitoolnp.png)
+![nginx](https://github.com/SashkaSer/kuber/blob/main/1.4/img/nginxnp.png)  
+![multitool](https://github.com/SashkaSer/kuber/blob/main/1.4/img/multitoolnp.png)
 
