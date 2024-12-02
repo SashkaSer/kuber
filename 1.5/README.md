@@ -22,10 +22,12 @@
 
 Запрос на http://sergienko-kuber.com/
 ![nginx](https://github.com/SashkaSer/kuber/blob/main/1.5/img/nginx1.png)`  
+
 ![nginx2](https://github.com/SashkaSer/kuber/blob/main/1.5/img/nginx2.png)`  
 
 Запрос на http://sergienko-kuber.com/api
 ![multitool](https://github.com/SashkaSer/kuber/blob/main/1.5/img/multitool1.png)`  
+
 ![multitool2](https://github.com/SashkaSer/kuber/blob/main/1.5/img/multitool2.png)`  
 
 4. Предоставить манифесты и скриншоты или вывод команды п.2.
