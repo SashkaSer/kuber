@@ -10,7 +10,10 @@
 Запущенные поды, деплойменты и сервисы
 ![podservice](https://github.com/SashkaSer/kuber/blob/main/1.5/img/podservice.png)`  
 
-Frontend и backend видят друг друга
+Frontend и backend видят друг друга  
+![backtofront](https://github.com/SashkaSer/kuber/blob/main/1.5/img/backtofront.png)`  
+![fronttoback](https://github.com/SashkaSer/kuber/blob/main/1.5/img/fronttoback.png)
+
 Манифесты к заданию 1 лежат в manifests/task1
 
 ---
