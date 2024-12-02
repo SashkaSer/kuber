@@ -8,12 +8,7 @@
 5. Предоставить манифесты Deployment и Service в решении, а также скриншоты или вывод команды п.4.   
 
 Запущенные поды, деплойменты и сервисы
-![podservice](https://github.com/SashkaSer/kuber/blob/main/1.4/img/podservice.png)`  
-
-При запросе на порт 9001 отвечает Nginx, а при запросе на 9002 отвечает multitool
-![nginx](https://github.com/SashkaSer/kuber/blob/main/1.3/img/nginx.png)`  
-
-![multitool](https://github.com/SashkaSer/kuber/blob/main/1.3/img/multitool.png)`
+![podservice](https://github.com/SashkaSer/kuber/blob/main/1.5/img/podservice.png)`  
 
 Манифесты к заданию 1 лежат в manifests/task1
 
