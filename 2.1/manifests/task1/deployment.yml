@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo
+spec:
+  selector:
+    matchLabels:
+      app: echo
+  template:
+    metadata:
+      labels:
+        app: echo
+    spec:
+      containers:
+        - name: busybox
+          image: busybox
+          volumeMounts:
+            - name: test
+              mountPath: /test
+          command: ['sh', '-c', 'while true; do echo {`date`} >> ./test/test.txt; sleep 5; done;']
+
+        - name: multitool
+          image: praqma/network-multitool
+          volumeMounts:
+            - name: test
+              mountPath: /test
+      volumes:
+        - name: test
+          emptyDir: {}
+
