@@ -12,7 +12,7 @@ busybox каждые 5 секунд пишет дату и время в фай�
 command: ['sh', '-c', 'while true; do echo {`date`} >> ./test/test.txt; sleep 5; done;']
 ```
 multitool имеет доступ к этому файлу через общий Volume
-![file](https://github.com/SashkaSer/kuber/blob/main/1.5/img/ingressnginx.png)`  
+![file](https://github.com/SashkaSer/kuber/blob/main/2.1/img/date.png)`  
 
 Манифесты к заданию 1 лежат в manifests/task1
 
