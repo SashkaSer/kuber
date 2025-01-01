@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: multitool-daemon
+  labels:
+    app: multitool-daemon
+spec:
+  selector:
+    matchLabels:
+      app: multitool-daemon
+  template:
+    metadata:
+      labels:
+        app: multitool-daemon
+    spec:
+      containers:
+        - name: multitool
+          image: praqma/network-multitool
+          volumeMounts:
+            - name: node-logs
+              mountPath: /node-logs
+      volumes:
+        - name: node-logs
+          hostPath:
+            path: /var/log
