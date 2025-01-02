@@ -14,6 +14,11 @@
 
 Видно, что multitool может читать данные из общей директории
 ![multi](https://github.com/SashkaSer/kuber/blob/main/2.2/img/mutli.png)`  
+
+Удалили Deployment и PVC, PV остался. PV существует обособлено от пода и после удаления пода он продолжает существовать.
+ ![multi](https://github.com/SashkaSer/kuber/blob/main/2.2/img/pvexist.png)`
+
+После удаления PV данные остались на диске, так как используется политика Retain
 Манифесты к заданию 1 лежат в manifests/task1
 
 ---
