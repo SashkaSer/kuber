@@ -29,3 +29,13 @@
 2. Создать Deployment приложения состоящего из multitool, и подключить к нему PV, созданный автоматически на сервере NFS.
 3. Продемонстрировать возможность чтения и записи файла изнутри пода.
 4. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
+
+NFS-сервер на MicroK8S настроен согласно https://microk8s.io/docs/how-to-nfs
+
+Как видно из скриншота PV создался автоматически через SC на сервере NFS
+![createpvviasc](https://github.com/SashkaSer/kuber/blob/main/2.2/img/createpvviasc.png)`  
+
+Видно, что multitool может читать данные из общей директории, а так же данный доступны локально на машине  
+![datafromsc](https://github.com/SashkaSer/kuber/blob/main/2.2/img/datafromsc.png)`  
+
+Манифесты к заданию 1 лежат в manifests/task2
