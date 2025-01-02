@@ -12,7 +12,7 @@
 Созданный Pod, PV и PVC
 ![podpvpvc](https://github.com/SashkaSer/kuber/blob/main/2.2/img/podpvpvc.png)`  
 
-Видно, что multitool может читать данный из общей директории
+Видно, что multitool может читать данные из общей директории
 ![multi](https://github.com/SashkaSer/kuber/blob/main/2.2/img/mutli.png)`  
 Манифесты к заданию 1 лежат в manifests/task1
 
