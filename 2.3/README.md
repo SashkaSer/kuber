@@ -118,7 +118,7 @@ data:
 
 ![web2](https://github.com/SashkaSer/kuber/blob/main/2.3/img/web2.png)`
 
-Запущенные объекты
+Запущенные объекты  
 ![kind](https://github.com/SashkaSer/kuber/blob/main/2.3/img/kinds.png)`  
 
 Манифесты к заданию 1 лежат в manifests/task2
