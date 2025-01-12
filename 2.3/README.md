@@ -68,19 +68,48 @@ volumes:
 Манифесты к заданию 1 лежат в manifests/task1
 
 ---
-### Задание 2 Создать Deployment приложения, которое может хранить файлы на NFS с динамическим созданием PV.
+### Задание 2 Создать приложение с вашей веб-страницей, доступной по HTTPS
+1. Создать Deployment приложения, состоящего из Nginx.
+2. Создать собственную веб-страницу и подключить её как ConfigMap к приложению.
+3. Выпустить самоподписной сертификат SSL. Создать Secret для использования сертификата.
+4. Создать Ingress и необходимый Service, подключить к нему SSL в вид. Продемонстировать доступ к приложению по HTTPS.
+5. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
 
-1. Включить и настроить NFS-сервер на MicroK8S.
-2. Создать Deployment приложения состоящего из multitool, и подключить к нему PV, созданный автоматически на сервере NFS.
-3. Продемонстрировать возможность чтения и записи файла изнутри пода.
-4. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
+Кастомная веб страница с помощью ConfigMap
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-page
+data:
+  index.html: |
+    <html>
+    <h1>Hello from netology. This is HTTPS</h1>
+    </br>
+    <h1>| Sergienko_A.</h1>
+    </html>   
+#Вырезка из Deployment
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - name: page
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: page
+          configMap:
+            name: nginx-page
+```
 
-NFS-сервер на MicroK8S настроен согласно https://microk8s.io/docs/how-to-nfs
+Созданный серкет, помещенный в Ingress  
+![secret](https://github.com/SashkaSer/kuber/blob/main/2.3/img/secret.png)` 
 
-Как видно из скриншота PV создался автоматически через SC на сервере NFS
-![createpvviasc](https://github.com/SashkaSer/kuber/blob/main/2.2/img/createpvviasc.png)`  
-
-Видно, что multitool может читать данные из общей директории, а так же данный доступны локально на машине  
-![datafromsc](https://github.com/SashkaSer/kuber/blob/main/2.2/img/datafromsc.png)`  
-
-Манифесты к заданию 1 лежат в manifests/task2
+```
+  tls:
+    - hosts:
+        - useful-quarter.aeza.network
+      secretName: web-tls
+```
