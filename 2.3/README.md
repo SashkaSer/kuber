@@ -31,8 +31,33 @@ containers:
 Оба контейнера запущены  
 ![pods](https://github.com/SashkaSer/kuber/blob/main/2.3/img/pods.png)`  
 
-идно, что multitool может читать данные из общей директории
-![muti](https://github.com/SashkaSer/kuber/blob/main/2.2/img/mutli.png)` 
+Кастомная веб страница с помощью ConfigMap
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config-map
+data:
+  index.html: |
+    <html>
+    <h1>Hello from netology</h1>
+    </br>
+    <h1>| Sergienko_A.</h1>
+    </html>
+
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80
+      volumeMounts:
+        - name: nginx-config-map
+            mountPath: /usr/share/nginx/html
+volumes:
+    - name: nginx-config-map
+      configMap:
+        name: nginx-config-map
+```
+![web](https://github.com/SashkaSer/kuber/blob/main/2.2/img/mutli.png)` 
 
 далили Deployment и PVC, PV остался. PV существует обособлено от пода и после удаления пода он продолжает существовать.
 ![multi](https://github.com/SashkaSer/kuber/blob/main/2.2/img/pvexist.png)`
