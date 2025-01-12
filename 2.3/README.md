@@ -7,7 +7,7 @@
 4. Сделать простую веб-страницу и подключить её к Nginx с помощью ConfigMap. Подключить Service и показать вывод curl или в браузере.
 5. Предоставить манифесты, а также скриншоты или вывод необходимых команд.  
 
-2. Порт для multitool переопределен с помощью ConfigMap. Вырезка из Deployment
+Порт для multitool переопределен с помощью ConfigMap. Вырезка из Deployment
 ```
 apiVersion: v1
 kind: ConfigMap
@@ -28,8 +28,8 @@ containers:
                 name: multitool-port
                 key:port
 ```
-3. Оба контейнера запущены
-![pods](https://github.com/SahkaSer/kuber/blob/main/2.2/img/podpvpvc.png)`  
+Оба контейнера запущены
+![pods](https://github.com/SashkaSer/kuber/blob/main/2.3/img/pods.png)`  
 
 идно, что multitool может читать данные из общей директории
 ![muti](https://github.com/SashkaSer/kuber/blob/main/2.2/img/mutli.png)` 
