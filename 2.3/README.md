@@ -1,0 +1,60 @@
+# Домашнее задание к занятию "`Конфигурация приложений`" - `Сергиенко А. В.`
+
+### Задание 1. Создать Deployment приложения и решить возникшую проблему с помощью ConfigMap. Добавить веб-страницу
+1. Создать Deployment приложения, состоящего из контейнеров nginx и multitool.
+2. Решить возникшую проблему с помощью ConfigMap.
+3. Продемонстрировать, что pod стартовал и оба конейнера работают.
+4. Сделать простую веб-страницу и подключить её к Nginx с помощью ConfigMap. Подключить Service и показать вывод curl или в браузере.
+5. Предоставить манифесты, а также скриншоты или вывод необходимых команд.  
+
+2. Порт для multitool переопределен с помощью ConfigMap. Вырезка из Deployment
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: multitool-port
+data:
+  port: "8080"
+
+containers:
+    - name: multitool
+        image: praqma/network-multitool
+        ports:
+            - containerPort: 8080
+        env:
+        - name: HTTP_PORT
+          valueFrom:
+            configMapKeyRef:
+                name: multitool-port
+                key:port
+```
+3. Оба контейнера запущены
+![pods](https://github.com/SahkaSer/kuber/blob/main/2.2/img/podpvpvc.png)`  
+
+идно, что multitool может читать данные из общей директории
+![muti](https://github.com/SashkaSer/kuber/blob/main/2.2/img/mutli.png)` 
+
+далили Deployment и PVC, PV остался. PV существует обособлено от пода и после удаления пода он продолжает существовать.
+![multi](https://github.com/SashkaSer/kuber/blob/main/2.2/img/pvexist.png)`
+
+После удаления PV данные остались на диске, так как используется политика Retain
+![multi](https://github.com/SashkaSer/kuber/blob/main/2.2/img/deletepv.png)`
+Манифесты к заданию 1 лежат в manifests/task1
+
+---
+### Задание 2 Создать Deployment приложения, которое может хранить файлы на NFS с динамическим созданием PV.
+
+1. Включить и настроить NFS-сервер на MicroK8S.
+2. Создать Deployment приложения состоящего из multitool, и подключить к нему PV, созданный автоматически на сервере NFS.
+3. Продемонстрировать возможность чтения и записи файла изнутри пода.
+4. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
+
+NFS-сервер на MicroK8S настроен согласно https://microk8s.io/docs/how-to-nfs
+
+Как видно из скриншота PV создался автоматически через SC на сервере NFS
+![createpvviasc](https://github.com/SashkaSer/kuber/blob/main/2.2/img/createpvviasc.png)`  
+
+Видно, что multitool может читать данные из общей директории, а так же данный доступны локально на машине  
+![datafromsc](https://github.com/SashkaSer/kuber/blob/main/2.2/img/datafromsc.png)`  
+
+Манифесты к заданию 1 лежат в manifests/task2
