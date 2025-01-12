@@ -59,10 +59,10 @@ volumes:
         name: nginx-config-map
 ```
 
-Кастомная страница доступа
+Кастомная страница доступа  
 ![web](https://github.com/SashkaSer/kuber/blob/main/2.3/img/web.png)` 
 
-Запущенные объекты
+Запущенные объекты  
 ![kinds](https://github.com/SashkaSer/kuber/blob/main/2.3/img/kinds.png)` 
 
 Манифесты к заданию 1 лежат в manifests/task1
