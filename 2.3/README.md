@@ -16,6 +16,7 @@ metadata:
 data:
   port: "8080"
 
+#Вырезка из Deployment
 containers:
     - name: multitool
         image: praqma/network-multitool
@@ -44,7 +45,7 @@ data:
     </br>
     <h1>| Sergienko_A.</h1>
     </html>
-
+#Вырезка из Deployment
     - name: nginx
       image: nginx
       ports:
@@ -57,7 +58,7 @@ volumes:
       configMap:
         name: nginx-config-map
 ```
-![web](https://github.com/SashkaSer/kuber/blob/main/2.2/img/mutli.png)` 
+![web](https://github.com/SashkaSer/kuber/blob/main/2.3/img/web.png)` 
 
 далили Deployment и PVC, PV остался. PV существует обособлено от пода и после удаления пода он продолжает существовать.
 ![multi](https://github.com/SashkaSer/kuber/blob/main/2.2/img/pvexist.png)`
