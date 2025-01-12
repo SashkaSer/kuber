@@ -115,4 +115,5 @@ data:
 ```
 Проверка  
 ![web1](https://github.com/SashkaSer/kuber/blob/main/2.3/img/web1.png)`  
-![web2](https://github.com/SashkaSer/kuber/blob/main/2.3/img/web2.png)` 
+
+![web2](https://github.com/SashkaSer/kuber/blob/main/2.3/img/web2.png)`
