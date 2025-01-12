@@ -28,7 +28,7 @@ containers:
                 name: multitool-port
                 key:port
 ```
-Оба контейнера запущены
+Оба контейнера запущены  
 ![pods](https://github.com/SashkaSer/kuber/blob/main/2.3/img/pods.png)`  
 
 идно, что multitool может читать данные из общей директории
